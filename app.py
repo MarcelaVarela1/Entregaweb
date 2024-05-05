@@ -1,7 +1,7 @@
 import dash #Se importa la libreria de Dash
 from dash import html
 import dash_bootstrap_components as dbc
-import math
+import numpy as np
 from dash.dependencies import Input, Output
 
 
@@ -39,10 +39,10 @@ def update_output(EntradaCohesion, EntradaSobreCarga, EntradaBase, EntradaPesoEs
         return "Por favor, asegúrese de que todos los campos numéricos contienen valores válidos."
     
 
-    nq = math.tan(math.radians(45 + (EntradaAnguloFriccion / 2))) ** 2 * math.e ** (math.pi * math.tan(math.radians(EntradaAnguloFriccion)))
-    cot_angulo_friccion = 1 / math.tan(math.radians(EntradaAnguloFriccion))
+    nq = np.tan(np.radians(45 + (EntradaAnguloFriccion / 2))) ** 2 * np.e ** (np.pi * np.tan(np.radians(EntradaAnguloFriccion))))
+    cot_angulo_friccion = 1 / np.tan(np.radians(EntradaAnguloFriccion))
     nc = (nq - 1) * cot_angulo_friccion
-    nγ = 2 * (nq + 1) * math.tan(math.radians(EntradaAnguloFriccion))
+    nγ = 2 * (nq + 1) * np.tan(np.radians(EntradaAnguloFriccion))
 
 
     if selected_value == 'corrida':
