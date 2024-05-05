@@ -8,7 +8,7 @@ from dash.dependencies import Input, Output
 #se importa el front 
 from fronted.fronted import layout
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-
+app=app.server
 app.layout = layout
 
 
