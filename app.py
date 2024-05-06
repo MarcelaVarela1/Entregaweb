@@ -39,7 +39,7 @@ def update_output(EntradaCohesion, EntradaSobreCarga, EntradaBase, EntradaPesoEs
         return "Por favor, asegúrese de que todos los campos numéricos contienen valores válidos."
     
 
-   nq = np.tan(np.radians(45 + (EntradaAnguloFriccion / 2))) ** 2 * np.e ** (np.pi * np.tan(np.radians(EntradaAnguloFriccion)))
+    nq = np.tan(np.radians(45 + (EntradaAnguloFriccion / 2))) ** 2 * np.e ** (np.pi * np.tan(np.radians(EntradaAnguloFriccion)))
     cot_angulo_friccion = 1 / np.tan(np.radians(EntradaAnguloFriccion))
     nc = (nq - 1) * cot_angulo_friccion
     nγ = 2 * (nq + 1) * np.tan(np.radians(EntradaAnguloFriccion))
