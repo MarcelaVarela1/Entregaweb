@@ -1,5 +1,5 @@
 import dash #Se importa la libreria de Dash
-from dash import html
+from dash import html, dcc
 import dash_bootstrap_components as dbc
 import numpy as np
 from dash.dependencies import Input, Output
