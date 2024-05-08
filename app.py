@@ -1,13 +1,12 @@
 import dash #Se importa la libreria de Dash
-from dash import html, dcc
+from dash import Dash, dash_table, dcc, html, Input, Output, callback
 import dash_bootstrap_components as dbc
 import numpy as np
-from dash.dependencies import Input, Output
 
 
 #se importa el front 
 from fronted.fronted import layout
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 app=app.server
 app.layout = layout
 
