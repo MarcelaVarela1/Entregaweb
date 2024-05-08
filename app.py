@@ -7,7 +7,7 @@ import numpy as np
 #se importa el front 
 from fronted.fronted import layout
 app = Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
-app=app.server
+server=app.server
 app.layout = layout
 
 
